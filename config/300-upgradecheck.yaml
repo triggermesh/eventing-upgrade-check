@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  # generateName: upgrade-check-
+  name: upgrade-check
+  namespace: knative-upgrade
+spec:
+  template:
+    spec:
+      serviceAccountName: upgrade-check
+      restartPolicy: Never
+      containers:
+      - name: upgrade-check
+        image: ko://github.com/triggermesh/eventing-upgrade-check/cmd
