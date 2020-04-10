@@ -6,6 +6,9 @@ metadata:
   namespace: knative-upgrade
 spec:
   template:
+    metadata:
+      labels:
+        app: upgrade-check
     spec:
       serviceAccountName: upgrade-check
       restartPolicy: Never

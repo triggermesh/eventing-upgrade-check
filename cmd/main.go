@@ -15,6 +15,8 @@ import (
 )
 
 func main() {
+	out("Starting upgrade-check v0.13.x to v0.14.x.")
+
 	k, _ := os.LookupEnv("KUBECONFIG")
 	namespace, _ := os.LookupEnv("NAMESPACE")
 
@@ -26,6 +28,7 @@ func main() {
 	c := eventing.NewForConfigOrDie(cfg)
 	r := checkTriggers(c, namespace)
 
+	out("Found %d subscriptions that need upgrade.", len(r))
 	for _, re := range r {
 		printSubscriptionNeedRecreate(re.oldName, re.newName, re.namespace, re.found)
 	}

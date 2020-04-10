@@ -1,0 +1,8 @@
+/.idea/
+*~
+*.swp
+*.swo
+
+eventing-upgrade-check*
+
+/.local/
