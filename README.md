@@ -58,7 +58,7 @@ Old and new names are generated using Triggers and Brokers data, this tool also 
 
 ### Image
 
-An image for this tool is provided at `gcr.io/triggermesh/eventing-upgrade-check`
+An image for this tool is provided at `gcr.io/triggermesh/eventing-upgrade-check:v0.1.0`
 
 A set of manifest to run the update check inside the cluster is also provided. A job containing the binary is executed at the `knative-upgrade` namespace under the `upgrade-check` account with minimal read permissions on triggers and subscriptions.
 
