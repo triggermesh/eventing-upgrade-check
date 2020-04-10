@@ -35,7 +35,7 @@ This tool does not modify any object at your cluster.
 If `KUBECONFIG` is not found it will try to use in cluster configuration.
 If `NAMESPACE` is not found it will check all Triggers at all namespaces.
 
-- Download the binary for your OS from the [releases](https://github.com/triggermesh/triggerflow/releases) links.
+- Download the binary for your OS from the [releases](https://github.com/triggermesh/eventing-upgrade-check/releases) links.
 - Set execution permissions
 - Set environment variables if needed
 
